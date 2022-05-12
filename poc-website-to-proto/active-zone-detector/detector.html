@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>detect clickable zones</title>
+  </head>
+  <body>
+    <p style="height: 1000px; padding-top:100px">
+      scroll scroll <span style="position:absolute;transform: rotate(0.5turn);">↑</span>
+    </p>
+    <p>
+      links
+      <a href="http://yahoo.com">a http link</a>
+    </p>
+    <p>
+      <span onclick="alert('miaou')">an onclick attribute</span>      
+    </p>
+    <p>
+      events
+      <span id="clickable">a clickable span</a>
+      <script>
+        document.getElementById('clickable').addEventListener('click', () => {
+          alert('clicked');
+        });
+      </script>
+    </p>
+    <p>
+      forms and inputs
+      <form>
+        <input type="text" value="input">
+        <button>button</button>
+        <input type="submit">
+      </form>
+    </p>
+    <p style="position:absolute; right:30px; top: 50px">
+      elements on absolute pos: <a href="http://yahoo.com">a http link</a>
+    </p>
+    <p style="position: fixed; right: 30px; top: 30px">
+      elements on fixed pos: <a href="http://yahoo.com">a http link</a>
+    </p>
+    <hr>
+    <script src="detector.js"></script>
+    <div><a href="javascript:detect()">detect clickable zones</a></div>
+  </body>
+</html>

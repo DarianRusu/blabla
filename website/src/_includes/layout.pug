@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport",content="width=device-width, initial-scale=1")
+    title=title
+    link(rel="stylesheet", href="/styles/main.css")
+
+  //- string interpolation below
+  //- https://pugjs.org/language/interpolation.html#string-interpolation-unescaped
+  body
+    .header
+      div.logo
+        a(href="/")
+          img(src="/assets/logo.png")
+      p.title Live website testing
+      div.subtitle Demo website
+    .flex
+      nav
+        ul.pages
+          li
+            a(href="/") Home
+          //- each p in collections.pages
+          //-   li(class=page.url == p.url ? 'active' : '')
+          //-     a(href=p.url)
+          //-       if p.data.title
+          //-         span(class='title')
+          //-           = p.data.title
+        ul
+      main
+        .content
+          block content
+    //- footer should be only on index, yet atm there is only one page
+    footer
+      block footer
+        div(class="update") last update:&nbsp;
+          span #{page.date.toISOString()}
+        div(class="home")
+          a(href="/") back to home

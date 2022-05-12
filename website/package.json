@@ -1,0 +1,19 @@
+{
+  "name": "demo-ecommerce-website",
+  "version": "1.0.1",
+  "main": "src/index.md",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "concurrently": "^6.2.1",
+    "stylus": "^0.55.0"
+  },
+  "scripts": {
+    "build:stylus": "stylus --compress ./src/styles/ --out ./dist/styles/",
+    "watch:stylus": "stylus --watch ./src/styles/ --out ./dist/styles/",
+    "build:11ty": "eleventy",
+    "watch:11ty": "eleventy --serve --port=8014",
+    "build": "concurrently \"npm:build:*\"",
+    "dev": "concurrently \"npm:watch:*\"",
+    "debug": "DEBUG=Eleventy* yarn dev"
+  }
+}

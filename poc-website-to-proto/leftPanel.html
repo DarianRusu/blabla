@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <link href="./styles.css" rel="stylesheet" />
+    <title>Hello World!</title>
+    <style>
+      ul {
+        list-decoration: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 1;
+      }
+
+      li {
+        display: inline;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body style="height: 100vh; background-color: pink">
+    <h1>Your views</h1>
+    <ul id="views"></ul>
+
+    <script src="leftPanel.js"></script>
+  </body>
+</html>
